@@ -1,0 +1,152 @@
+//variables
+int introChoice, middleChoice1, middleChoice2, middleChoice3;
+string_t Name1, Name2, roadmap1;
+//6 functions
+
+void Name(){
+    printf("enter a name\n");
+    scanf("%s", &Name1);
+    printf("enter anouther name\n");
+    scanf("%s", &Name2);
+}
+
+void roadmap(){
+    printf("do you want to see the road map? yes or no\n");
+    scanf("%s", &roadmap1);
+    if(roadmap1 == "yes"){
+    
+        printf("                                   INTRO\n\
+            middel 1                 middel 2                   middel3\n             end1,end2,end3        end4,end5,end6         end7,end8,end9              \n ");
+    
+        
+    }
+    if(roadmap1 == "no" ){
+        printf("ok enjoy the adventure\n");
+    }
+}
+
+void intro(){
+    printf("There was this man who had the name of "+ Name1 + " and he was taking a walk in the woods. \nThe walk was going normal but then he saw a cave that "+Name1+" had never seen before. \n"+Name1+" decided to walk towards it to his surprise there was a red balloon inside. \n"+Name1+" decided to walk twarde the balloon. Once "+Name1+" was right next to it he decided to touch it. "+Name2+" did the same thing\n");
+    //printf("Please choose '1', '2', or '3'\n");
+    //scanf("%i", &introChoice);
+    while(introChoice != 1 && introChoice != 2 && introChoice != 3){
+        printf("Please choose '1', '2', or '3'\n");
+        scanf("%i", &introChoice);
+    }
+}
+void middle1(){
+    printf("you chose middle 1");
+    printf("\n"+Name1+" is going to a tropical island. He will spend a number of days on each island. \n"+Name1+" will meet at least one other person on his adventure called "+Name2+" . they will have to do what ever they want . \n"+Name1+" may or may not get slapped by "+Name2+".");
+
+    printf("\nmake your end choice: 1, 2, or 3\n");
+    scanf("%i", &middleChoice1);
+    
+}
+void middle2(){
+    printf("you chose middle 2");
+    printf("\n"+Name1+" is now going to a snow area. It will be very cold. \n"+Name1+" better bring a jacket. "+Name1+" better also bring snowshoes. \nhopefully no polar bears eat "+Name1+" or "+Name2);
+    printf("\nMake your end choice 4, 5, or 6\n");
+    scanf("%i", &middleChoice2);
+}
+void middle3(){
+    printf("you chose middle 3");
+    printf("\n"+Name1+" is also going to a desert. It is very hot so name1 will need shorts. "+Name1+" will also need lots of water. \nHopefully "+Name1+" doesn't get any hallucinations of "+Name2+". "+Name1+" will probably be hot.");
+    printf("\nMake your end choice 7, 8, or 9\n");
+    scanf("%i", &middleChoice3);
+}
+void end1(){
+    printf("you chose end 1");
+    printf("\n"+Name1+" Has gone Maui. "+Name1+" has arrived in a jungle in maui. In front of him he sees a bottle in the bottle there is a note. \nThe note says ‘ you have to go to the other side of the island to get a can’. \n"+Name1+" goes to the other side of the island and gets the can. The can says ’turn around’. \n"+Name1+" turns around and then gets slapped in the face by "+Name2);
+
+    exit (1);
+
+}
+
+void end2(){
+    printf("you chose end 2");
+    printf("\n"+Name1+" has gone bali. Bali is an amazing island. There is a ocean. Name1 decided to go swimming in it. "+Name1+" also made a sand castle with "+Name2); 
+    exit (2);
+}
+
+void end3(){
+    printf("you chose end 3"); 
+    printf("\n"+Name1+" has gone Bora Bora. Bora Bora is an amazing island. There is a very big ocean. \n"+Name1+" decided to go swimming in it. Name1 also went to the board walk and bought a water from "+Name2);
+    exit (3);
+}
+void end4(){
+    printf("you chose end 4");
+    printf("\n"+Name1+" has chosen antarctica. "+Name1+"  will be able to play in the snow. Name1 will Try not to get hit by an iceberg. "+Name1+" will try to make a snow man. "+Name1+" ends up getting attacked by a polar bear and "+Name2);
+    exit (4);
+}
+
+void end5(){
+    printf("you chose end 5");
+    printf("\n"+Name1+" has chosen Alaska. In Alaska "+Name1+" will experience only 2-3 hours of day light. "+Name1+" will most likely be cold. \n"+Name1+" will also be able to go swimming in a hot spring. "+Name1+" bought a hot coco from "+Name2); 
+    exit (5);
+}
+
+
+void end6(){
+    printf("you chose end 6");
+    printf("\n"+Name1+" has chosen lake tahoe. "+Name1+" will go skiing in heavenly. \n"+Name1+" will also go to the snow to play with snowballs. "+Name1+" will also stay in a cabin. He is staying at "+Name2+"’s cabin");
+    exit (6);
+}
+void end7(){
+    printf("you chose end 7");
+    printf(Name1+" has chosen Death valley. "+Name1+" will need to drink a lot of ice cold water. \n"+Name1+" will also like to be cold. "+Name1+" will be very hot most likely. \n"+Name1+" will buy some water from "+Name2);
+    exit (7);
+}
+void end8(){
+    printf("you chose end 8");
+    printf("\n"+Name1+" has chosen Las vegas. "+Name1+" will be able to gamble all his money away. \n"+Name1+" can also watch many magic shows. "+Name1+" can also give a famous person a high 5. \n"+Name1+" will also buy a shirt from "+Name2);
+    exit (8);
+}
+void end9(){
+    printf("you chose end 9");
+    printf("\n"+Name1+" has gone to the Sahara desert. It will be very very how "+Name1+" will have to wear shorts. \n"+Name1+" will aslo buy food from "+Name2+". "+Name2+" will then make "+Name1+" pay way too much. \nThis results in the two of them fighting in a all out brawl");
+    exit (9);
+}
+
+int main(){  //main program to run (logic)
+    roadmap();
+    Name();
+    intro();
+    if(1 == introChoice){
+        middle1();
+        if(middleChoice1 == 1){
+            end1();
+        }
+        if(middleChoice1 == 2){
+            end2();
+        }
+        if(middleChoice1 == 3){
+            end3();
+        }
+    }
+    if(2 == introChoice){
+        middle2();
+        if(middleChoice2 == 4){
+            end4();
+        }
+        if(middleChoice2 == 5){
+            end5();
+        }
+        if(middleChoice2 == 6){
+            end6();
+        }
+    }
+    
+
+    if(3 == introChoice){
+        middle3();
+        if(middleChoice3 == 7){
+            end7();
+        }
+        if(middleChoice3 == 8){
+            end8();
+        }
+        if(middleChoice3 == 9){
+            end9();
+        }
+    }
+}
