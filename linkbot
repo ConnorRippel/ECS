@@ -1,0 +1,21 @@
+#include <linkbot.h>
+CLinkbotI robot;
+int distance = 9;
+int  trackwidth = 3.69;
+double radius = 1.75;
+int x;
+int y;
+
+
+robot.driveDistance(distance,radius);
+
+robot.turnRight(90,radius, trackwidth);
+robot.driveDistance(17, radius);
+printf("enter an x value");
+scanf("i",&x);
+
+robot.driveDistance(x, radius,);
+printf("enter an y value");
+scanf("i",&y);
+
+robot.driveDistance(y, radius,);
